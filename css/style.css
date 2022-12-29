@@ -53,6 +53,8 @@ a:hover {
 #contentsite p {
     line-height: 1.5em;
     padding: 10px 0;
+    font-weight: 300;
+    font-family: Roboto, Arial;
 }
 
 /* descrição */
