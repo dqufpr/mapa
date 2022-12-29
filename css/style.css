@@ -13,12 +13,12 @@ body {
 
 a {
     text-decoration: none;
-    color: #132660
+    color: #1d3c69;
 }
 
 a:hover {
     text-decoration: none;
-    color: #132660
+    color: #1d3c69;
 }
 
 #pagina {
@@ -67,7 +67,7 @@ a:hover {
     line-height: 2em;
     background: #bbc5d2;
     box-sizing: border-box;
-    color: rgb(61, 102, 138);
+    color: #3d668a;
     display: flow-root;
     text-align: center;
 }
@@ -90,9 +90,9 @@ a:hover {
 
 /* títulos */
 h1 {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 600;
-    color: #1152a8;
+    color: #1d3c69;
     padding: 20px 0;
 }
 
@@ -172,7 +172,7 @@ h2 {
 
 /*-- menu principal --*/
 #menu {
-    background: rgb(29, 60, 105);
+    background: #1d3c69;
     height: 50px;
     display: inline-flex;
     float: left;
@@ -219,16 +219,16 @@ ul li.itemmenubar a:hover {
     color: #5b5b5b;
     width: 100%;
     padding: 35px;
-    margin: 0;
     border-top: 1px solid #c0c0c0;
-    font-size: 88%;
+    margin: 0;
+    font-size: 86%;
     box-sizing: border-box;
-    font-weight: 400;
+    font-family: Gotham;
 }
 
 #rodape a {
     text-decoration: none;
-    color: #0b08a8
+    color: #1d3c69;
 }
 
 #rodape #coluna {
