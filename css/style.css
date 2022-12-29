@@ -41,6 +41,20 @@ a:hover {
     box-sizing: border-box;
 }
 
+#contentsite {
+    width: 80%;
+    display: inherit;
+    padding: 1em 3em;
+    height: auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: left;
+}
+#contentsite p {
+    line-height: 1.5em;
+    padding: 10px 0;
+}
+
 /* descrição */
 #descricao {
     width: 100%;
@@ -74,11 +88,17 @@ a:hover {
 
 /* títulos */
 h1 {
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    font-size: 22px;
+    font-weight: 600;
     color: #1152a8;
-    padding: 6px 0 10px 0;
+    padding: 20px 0;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #3f4a57;
+    padding: 20px 0;
 }
 
 /* colunas */
@@ -248,6 +268,15 @@ ul li.itemmenubar a:hover {
         background-position: center;
         background-size: 60%;
         background-image: url(https://dqufpr.github.io/mapa/img/logo-site-mobile.svg);
+    }
+    
+    #contentsite {
+        width: 95%;
+        display: inherit;
+        padding: 20px;
+        height: auto;
+        margin: 0 auto;
+        box-sizing: border-box;
     }
 
     #menu {
@@ -437,7 +466,7 @@ ul li.itemmenubar a:hover {
         margin: 5px 0;
         padding: 5px 0;
         font-size: 90%;
-}
+    }
 
     #nav #bottom {
         padding: 0;
