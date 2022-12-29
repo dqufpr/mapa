@@ -56,7 +56,6 @@ a:hover {
     text-align: center;
 }
 
-
 /* mapa informacoes */
 .container {
     border: none;
@@ -73,7 +72,7 @@ a:hover {
     border: none;
 }
 
-
+/* títulos */
 h1 {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
@@ -82,7 +81,7 @@ h1 {
     padding: 6px 0 10px 0;
 }
 
-
+/* colunas */
 #colunas #coluna {
     width: 100%;
     display: table;
@@ -296,7 +295,7 @@ ul li.itemmenubar a:hover {
 }
 
 
-/*destaque home*/
+/*--- destaque home ---*/
 #caixadestaque {
     width: 80%;
     border: none;
@@ -368,6 +367,79 @@ ul li.itemmenubar a:hover {
 
     #caixadestaque #bottom {
         float: left;
+        padding: 0;
+        width: 100%;
+        margin: 0;
+        line-height: 0
+    }
+
+}
+
+
+/*--navegacao mapas --*/
+#nav {
+    width: 100%;
+    border: none;
+    background: #fff;
+    border-radius: 6px;
+    display: inline-table;
+    height: auto;
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#nav #bottom {
+    float: left;
+    padding: 0px 40px;
+    text-align: center;
+    width: 50%;
+    box-sizing: border-box;
+    display: block;
+}
+
+#nav #bottom a {
+    margin: 10px 0;
+    border: 1px solid #e1e1e1;
+    display: inherit;
+    padding: 10px 0;
+    color: #abb2bd;
+    border-radius: 6px;
+    font-size: 110%;
+    font-weight: 900;
+    text-decoration: none;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+
+#nav #bottom a:hover {
+    color: #388da6;
+    text-decoration: none;
+    opacity: 85%;
+    background: #f4f4f4;
+    transition: 0.1s;
+}
+
+#nav #bottom span {
+    line-height: 1.5em;
+}
+
+@media (max-width: 600px) {
+    #nav {
+        width: 90%;
+        display: table;
+        padding: 0;
+        margin: 30px auto;
+    }
+
+    #nav #bottom a {
+        margin: 5px 0;
+        padding: 5px 0;
+        font-size: 90%;
+}
+
+    #nav #bottom {
         padding: 0;
         width: 100%;
         margin: 0;
