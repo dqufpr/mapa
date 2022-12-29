@@ -219,11 +219,11 @@ ul li.itemmenubar a:hover {
     color: #5b5b5b;
     width: 100%;
     padding: 35px;
-    border-top: 1px solid #c0c0c0;
     margin: 0;
-    font-size: 86%;
+    border-top: 1px solid #c0c0c0;
+    font-size: 88%;
     box-sizing: border-box;
-    font-family: Gotham;
+    font-weight: 400;
 }
 
 #rodape a {
