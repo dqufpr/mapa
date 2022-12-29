@@ -50,6 +50,7 @@ a:hover {
     box-sizing: border-box;
     text-align: left;
 }
+
 #contentsite p {
     line-height: 1.5em;
     padding: 10px 0;
@@ -271,7 +272,7 @@ ul li.itemmenubar a:hover {
         background-size: 60%;
         background-image: url(https://dqufpr.github.io/mapa/img/logo-site-mobile.svg);
     }
-    
+
     #contentsite {
         width: 95%;
         display: inherit;
@@ -457,6 +458,7 @@ ul li.itemmenubar a:hover {
     line-height: 1.5em;
 }
 
+
 @media (max-width: 600px) {
     #nav {
         width: 90%;
@@ -478,13 +480,23 @@ ul li.itemmenubar a:hover {
         line-height: 0
     }
 
+    /* formulario */
+
+    #formulario {
+        width: 100%;
+        margin: 0;
+    }
 }
+
+
 /* formularios */
 #formulario {
-    width: 70%;
+    width: 60%;
     margin: 0 auto 2em auto;
 }
-#formulario .caixa1, #formulario .caixa2 {
+
+#formulario .caixa1,
+#formulario .caixa2 {
     background: #f6f6f6;
     padding: 15px;
     box-sizing: border-box;
@@ -493,6 +505,7 @@ ul li.itemmenubar a:hover {
     font-size: 110%;
     font-family: Roboto;
 }
+
 #formulario input[type="submit"] {
     background: #1d3c69;
     margin: 0;
@@ -502,7 +515,15 @@ ul li.itemmenubar a:hover {
     color: #fff;
     font-weight: 900;
 }
+
 #formulario input[type="submit"]:hover {
     background: #426392;
     cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    #formulario {
+        width: 100%;
+        margin: 0;
+    }
 }
