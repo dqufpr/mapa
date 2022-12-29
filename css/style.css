@@ -479,3 +479,30 @@ ul li.itemmenubar a:hover {
     }
 
 }
+/* formularios */
+#formulario {
+    width: 70%;
+    margin: 0 auto 2em auto;
+}
+#formulario .caixa1, #formulario .caixa2 {
+    background: #f6f6f6;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid #cecece;
+    border-radius: 3px;
+    font-size: 110%;
+    font-family: Roboto;
+}
+#formulario input[type="submit"] {
+    background: #1d3c69;
+    margin: 0;
+    padding: 1em 6em;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 900;
+}
+#formulario input[type="submit"]:hover {
+    background: #426392;
+    cursor: pointer;
+}
