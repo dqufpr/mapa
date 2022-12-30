@@ -44,7 +44,7 @@ a:hover {
 #contentsite {
     width: 80%;
     display: inherit;
-    padding: 1em 3em;
+    padding: 0px 40px;
     height: auto;
     margin: 0 auto;
     box-sizing: border-box;
@@ -274,9 +274,9 @@ ul li.itemmenubar a:hover {
     }
 
     #contentsite {
-        width: 95%;
+        width: 100%;
         display: inherit;
-        padding: 20px;
+        padding: 0 20px;
         height: auto;
         margin: 0 auto;
         box-sizing: border-box;
@@ -393,7 +393,7 @@ ul li.itemmenubar a:hover {
         width: 100%;
         border: none;
         display: table;
-        padding: 1em;
+        padding: 20px;
         box-shadow: none;
         margin: 0 auto;
     }
