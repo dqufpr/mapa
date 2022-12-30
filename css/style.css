@@ -62,15 +62,16 @@ a:hover {
 #descricao {
     width: 100%;
     margin: 0;
-    padding: 5px 20px 5px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 2em;
-    background: #bbc5d2;
+    padding: 20px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1em;
+    background: #f4f4f4;
     box-sizing: border-box;
     color: #3d668a;
-    display: flow-root;
+    display: inline-block;
     text-align: center;
+    font-family: Gotham;
 }
 
 /* mapa informacoes */
@@ -474,7 +475,8 @@ ul li.itemmenubar a:hover {
     text-decoration: none;
     opacity: 85%;
     background: #f4f4f4;
-    transition: 0.1s;
+    transition: 0.3s;
+    box-shadow: 0px 0px 15px #ebebeb;
 }
 
 #nav #bottom span {
