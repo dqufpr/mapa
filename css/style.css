@@ -221,6 +221,21 @@ ul li.itemmenubar a:hover {
     font-family: Gotham;
 }
 
+#rodape span {
+    background-image: url(https://dqufpr.github.io/img/logo-rodape.svg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    color: transparent;
+    width: 33%;
+    min-height: 25px;
+    float: left;
+    padding: 1em 0; 
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+
+}
+
 #rodape a {
     text-decoration: none;
     color: #373969;
@@ -314,6 +329,12 @@ ul li.itemmenubar a:hover {
         width: 100%;
     }
 
+    #rodape span {
+        background-position: top;
+        width: 100%;
+        min-height: 35px;    
+    }
+    
     #rodape #coluna.rodape1,
     #rodape #coluna.rodape2 {
         text-align: center;
