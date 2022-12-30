@@ -78,6 +78,7 @@ a:hover {
     border: none;
     width: 100%;
     height: auto;
+    min-height: 500px;
     background: #fff;
     margin: 0 auto;
 }
