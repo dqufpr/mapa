@@ -506,6 +506,13 @@ ul li.itemmenubar a:hover {
     font-family: Roboto;
 }
 
+#formulario .caixa2 {
+    width: 100%;
+    max-width: 100%;
+    min-height: 110px;
+    max-height: 110px;
+}
+
 #formulario input[type="submit"] {
     background: #1d3c69;
     margin: 0;
