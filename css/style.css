@@ -156,6 +156,7 @@ h2 {
     background-repeat: no-repeat;
     background-origin: content-box;
     background-size: 50%;
+    background-position: left center;
     background-image: url(https://dqufpr.github.io/mapa/img/logo-site-hv.svg);
 }
 
