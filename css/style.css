@@ -237,7 +237,6 @@ ul li.itemmenubar a:hover {
     margin: 0 auto;
     display: inline-block;
     position: relative;
-
 }
 
 #rodape a {
@@ -347,11 +346,9 @@ ul li.itemmenubar a:hover {
         text-align: center;
         padding: 10px 20px 0 20px;
     }
-
     #descricao {
         text-align: center;
     }
-
 }
 
 /*--- destaque home ---*/
@@ -381,9 +378,9 @@ ul li.itemmenubar a:hover {
 
 #caixadestaque #bottom {
     float: left;
-    padding: 0px 20px;
+    padding: 0px 10px;
     text-align: center;
-    width: 50%;
+    width: 33.3%;
     box-sizing: border-box;
     display: block;
 }
