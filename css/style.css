@@ -18,7 +18,7 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: #1d3c69;
+    color: #476b9f;
 }
 
 #pagina {
@@ -216,7 +216,7 @@ ul li.itemmenubar a:hover {
     background: #dee4ea;
     color: #5b5b5b;
     width: 100%;
-    padding: 35px;
+    padding: 40px;
     border-top: none;
     margin: 0;
     font-size: 88%;
@@ -326,6 +326,7 @@ ul li.itemmenubar a:hover {
     #rodape {
         width: 100%;
         text-align: center;
+        font-size: 80%;
     }
 
     #rodape #coluna {
@@ -333,9 +334,10 @@ ul li.itemmenubar a:hover {
     }
 
     #rodape span {
-        background-position: top;
+        background-position: center;
         width: 100%;
-        min-height: 35px;    
+        min-height: 40px;
+        margin: 0 0 20px 0;    
     }
     
     #rodape #coluna.rodape1,
@@ -387,17 +389,17 @@ ul li.itemmenubar a:hover {
 
 #caixadestaque #bottom a {
     margin: 10px 0;
-    border: 1px solid #f2f2f2;
+    border: 1px solid transparent;
     display: inherit;
     padding: 20px 0;
-    color: #6081b1;
+    color: #1d3c69;
     border-radius: 6px;
     font-size: 120%;
     font-weight: 900;
     text-decoration: none;
     background-color: rgb(255, 255, 255);
     box-sizing: border-box;
-    box-shadow: 0px 5px 10px #e3e3e3;
+    box-shadow: 2px 2px 10px #e5e5e5;
 }
 
 #caixadestaque #bottom span {
@@ -405,11 +407,13 @@ ul li.itemmenubar a:hover {
 }
 
 #caixadestaque #bottom a:hover {
-    color: #1d3c69;
+    color: #476b9f;
     text-decoration: none;
     opacity: 85%;
-    background: #f4f4f4;
-    transition: 0.1s;
+    background: #fff;
+    transition: 0.3s;
+    box-shadow: 0px 0px 20px #ddd;
+    border: 1px solid #eff0f0;
 }
 
 @media (max-width: 600px) {
@@ -431,7 +435,6 @@ ul li.itemmenubar a:hover {
     }
 
 }
-
 
 /*--navegacao mapas --*/
 #nav {
@@ -506,7 +509,6 @@ ul li.itemmenubar a:hover {
     }
 
     /* formulario */
-
     #formulario {
         width: 100%;
         margin: 0;
