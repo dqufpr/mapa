@@ -364,18 +364,6 @@ ul li.itemmenubar a:hover {
     box-sizing: border-box
 }
 
-#caixadestaque::before {
-    content: "Navegue pelas categorias:";
-    border: none;
-    display: table;
-    padding: 0;
-    margin: 10px auto;
-    font-size: 20px;
-    font-family: Gotham;
-    font-weight: 500;
-    color: #96a9c1;
-}
-
 #caixadestaque #bottom {
     float: left;
     padding: 0px 10px;
@@ -403,8 +391,8 @@ ul li.itemmenubar a:hover {
 #caixadestaque #bottom a.inativo {
     background-image: url(https://dqufpr.github.io/img/nota.svg);
     background-repeat: no-repeat;
-    background-position: 100% 50%;
-    background-size: 18%;
+    background-position: 100% 10%;
+    background-size: 20%;
 }
 
 #caixadestaque #bottom span {
