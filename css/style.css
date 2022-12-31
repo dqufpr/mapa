@@ -157,7 +157,7 @@ h2 {
     background-origin: content-box;
     background-size: 50%;
     background-position: left center;
-    background-image: url(https://dqufpr.github.io/mapa/img/logo-site-hv.svg);
+    background-image: url(../img/logo-site-hv.svg);
 }
 
 #cabecalho #titulo {
@@ -288,7 +288,7 @@ ul li.itemmenubar a:hover {
         background-origin: content-box;
         background-position: center;
         background-size: 60%;
-        background-image: url(https://dqufpr.github.io/mapa/img/logo-site-mobile.svg);
+        background-image: url(../img/logo-site-mobile.svg);
     }
 
     #contentsite {
