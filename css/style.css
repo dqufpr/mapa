@@ -429,87 +429,62 @@ ul li.itemmenubar a:hover {
     #caixadestaque #bottom a.inativo {
         background-position: 100% 10%;
     }
-
 }
 
 /*--navegacao mapas --*/
-#nav {
-    width: 100%;
-    border: none;
-    background: #fff;
-    border-radius: 6px;
-    display: inline-table;
-    height: auto;
-    padding: 20px;
+#navmap {
+    padding: 0;
     margin: 0 auto;
+    width: 95%;
+    background: #fff;
     box-sizing: border-box;
 }
 
-#nav #bottom {
-    float: left;
-    padding: 0px 40px;
-    text-align: center;
-    width: 50%;
-    box-sizing: border-box;
-    display: block;
+#navmap::before {
+    content: "Navegue pelas categorias:";
+    display: inline-table;
+    padding: 0 0 20px 0;
+    font-size: 100%;
+    font-family: Gotham;
+    font-weight: 500;
+    color: #8b9fa3;
 }
 
-#nav #bottom a {
-    margin: 10px 0;
-    border: 1px solid #e1e1e1;
-    display: inherit;
-    padding: 10px 0;
-    color: #abb2bd;
-    border-radius: 6px;
-    font-size: 110%;
+#navmap  ul {
+    list-style-type: none;
+    padding: 0 0 25px 0;
+    margin: 0 auto;
+    box-sizing:  border-box;
+}
+
+#navmap  ul li {
+    width: 15%;
+    display: inline-block;
+    border: 1px solid #e6e6e6;
+    background-color: #fafafa;
+    padding: 12px 20px;
+    margin: 0.6%;
     font-weight: 900;
-    text-decoration: none;
-    background-color: #f4f4f4;
-    box-sizing: border-box;
-    text-transform: uppercase;
+    border-radius: 6px;
 }
 
-#nav #bottom a:hover {
-    color: #1d3c69;
-    text-decoration: none;
-    opacity: 85%;
-    background: #f4f4f4;
-    transition: 0.3s;
-    box-shadow: 0px 0px 15px #ebebeb;
+#navmap  ul li:hover {
+    background-color: #ebeff1;
+    transition: .3s;
 }
 
-#nav #bottom span {
-    line-height: 1.5em;
-}
-
-
-@media (max-width: 600px) {
-    #nav {
-        width: 90%;
-        display: table;
-        padding: 0;
-        margin: 30px auto;
-    }
-
-    #nav #bottom a {
-        margin: 5px 0;
-        padding: 5px 0;
-        font-size: 90%;
-    }
-
-    #nav #bottom {
-        padding: 0;
+@media (max-width: 800px) {
+    #navmap  {
         width: 100%;
-        margin: 0;
-        line-height: 0
+        margin: 1em auto;
     }
-
-    /* formulario */
-    #formulario {
-        width: 100%;
-        margin: 0;
+    #navmap  ul li {
+    width: 75%;
+    margin: 4px 0;
+    padding: 8px 20px;
     }
 }
+
 
 /* formularios */
 #formulario {
