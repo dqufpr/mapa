@@ -543,6 +543,7 @@ ul li.itemmenubar a:hover {
     border-radius: 3px;
     color: #fff;
     font-weight: 900;
+    width: 100%;
 }
 
 #formulario input[type="submit"]:hover {
