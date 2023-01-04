@@ -383,9 +383,9 @@ ul li.itemmenubar a:hover {
     font-size: 120%;
     font-weight: 900;
     text-decoration: none;
-    background-color: #fbfbfb;
+    background-color: #fff;
     box-sizing: border-box;
-    box-shadow: 2px 2px 10px #e5e5e5;
+    box-shadow: 0 0 12px 2px #ececec;
 }
 
 #caixadestaque #bottom a.inativo {
