@@ -438,19 +438,22 @@ ul li.itemmenubar a:hover {
 /*--navegacao mapas --*/
 #navmap {
     padding: 0;
-    margin: 0 auto;
+    margin: 0 auto 50px auto;
     width: 95%;
     box-sizing: border-box;
+    background: #fcfcfc;
+    border: 1px solid #d2d2d2;
+    border-radius: 6px;
 }
 
 #navmap::before {
     content: "Navegue pelas categorias:";
     display: inline-table;
-    padding: 0 0 20px 0;
-    font-size: 100%;
+    padding: 15px 0 5px 0;
+    font-size: 120%;
     font-family: Gotham;
     font-weight: 500;
-    color: #8b9fa3;
+    color: #819898;
 }
 
 #navmap ul {
@@ -464,7 +467,7 @@ ul li.itemmenubar a:hover {
     width: 15%;
     display: inline-block;
     border: 1px solid #e6e6e6;
-    background-color: #fafafa;
+    background-color: #d9e2e9;
     padding: 12px 20px;
     margin: 0.6%;
     font-weight: 900;
@@ -489,6 +492,131 @@ ul li.itemmenubar a:hover {
     }
 }
 
+/*--- legendas espacos ---*/
+#dataon {
+    width: 100%;
+    background: #fff;
+    display: inline-table;
+    height: auto;
+    margin: 0 auto;
+    box-sizing: border-box
+}
+
+#dataon .data {
+    width: 96%;
+    display: inline-table;
+    height: auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+#dataon::before {
+    content: "Informações sobre os locais";
+    display: inline-table;
+    padding: 15px 0 15px 0;
+    font-size: 120%;
+    font-family: Gotham;
+    font-weight: 500;
+    color: #819898;
+}
+
+#content-leg #leg {
+    padding: 0;
+    background-color: #FFF;
+    text-align: left;
+    width: 48%;
+    box-sizing: border-box;
+    display: block;
+    margin: 0.6%;
+    border: 1px solid #a3a3a3;
+    border-radius: 6px;
+    min-height: 80px;
+    float: left;
+}
+
+#content-leg #leg h2 {
+    margin: 0;
+    padding: 0;
+    color: #16697c;
+    text-align: left;
+    font-size: 110%;
+}
+
+#content-leg #leg p {
+    margin: 0;
+    padding: 0;
+}
+
+#content-leg #leg #numero {
+    background-color: #5b5b5b;
+    box-sizing: border-box;
+    float: left;
+    padding: 0;
+    width: 13%;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    color: #383f4c;
+    border-radius: 6px 0px 0px 6px;
+    display: inherit;
+    min-height: 80px;
+}
+
+#content-leg #leg #numero p {
+    margin: 18px 0 0 0;
+}
+
+#content-leg #leg .conteudo {
+    display: inline-block;
+    padding: 15px 10px 0 10px;
+    box-sizing: border-box;
+    margin: 0;
+    width: 84%;
+}
+
+/*--- legendas cores numeros mapa ---*/
+#content-leg #leg #numero.salaaula {
+    background-color: #4067A1;
+}
+
+#content-leg #leg #numero.salaprof {
+    background-color: #377375;
+}
+
+#content-leg #leg #numero.labensino {
+    background-color: #A3CCE4;
+}
+
+#content-leg #leg #numero.labpesquisa {
+    background-color: #6693AE;
+}
+
+#content-leg #leg #numero.servico {
+    background-color: #965F8A;
+}
+
+#content-leg #leg #numero.banheiro {
+    background-color: #CC7FB5;
+}
+
+#content-leg #leg #numero.outros {
+    background-color: #e3e3e3;
+}
+
+@media (max-width: 800px) {
+    #content-leg #leg {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #content-leg #leg #numero {
+        padding: 0;
+        text-align: center;
+        font-size: 22px;
+        min-height: 80px;
+    }
+}
 
 /* formularios */
 #formulario {
