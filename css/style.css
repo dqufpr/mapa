@@ -481,7 +481,7 @@ ul li.itemmenubar a:hover {
 
 @media (max-width: 800px) {
     #navmap {
-        width: 100%;
+        width: 95%;
         margin: 1em auto;
     }
 
@@ -495,11 +495,12 @@ ul li.itemmenubar a:hover {
 /*--- legendas espacos ---*/
 #dataon {
     width: 100%;
-    background: #fff;
+    background-color: #fff;
     display: inline-table;
     height: auto;
     margin: 0 auto;
-    box-sizing: border-box
+    box-sizing: border-box;
+    min-height: 200px;
 }
 
 #dataon .data {
@@ -607,14 +608,26 @@ ul li.itemmenubar a:hover {
 @media (max-width: 800px) {
     #content-leg #leg {
         width: 100%;
-        margin: 10px 0;
+        padding: 0;
+        margin: 6px 0;
     }
-
+    
     #content-leg #leg #numero {
         padding: 0;
-        text-align: center;
-        font-size: 22px;
-        min-height: 80px;
+        font-size: 20px;
+        min-height: 90px;
+    }
+    #content-leg #leg .conteudo {
+        padding: 8px;
+    }
+    #content-leg #leg p {
+        font-size: 80%;
+    }
+    #content-leg #leg h2 {
+        font-size: 100%;
+    }
+    #dataon .data {
+        width: 94%;
     }
 }
 
