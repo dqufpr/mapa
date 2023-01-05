@@ -524,13 +524,13 @@ ul li.itemmenubar a:hover {
 
 #content-leg #leg {
     padding: 0;
-    background-color: #FFF;
+    background-color: #F4F4F4;
     text-align: left;
     width: 48%;
     box-sizing: border-box;
     display: block;
     margin: 0.6%;
-    border: 1px solid #a3a3a3;
+    border: 1px solid #fff;
     border-radius: 6px;
     min-height: 80px;
     float: left;
@@ -541,7 +541,7 @@ ul li.itemmenubar a:hover {
     padding: 0;
     color: #16697c;
     text-align: left;
-    font-size: 110%;
+    font-size: 130%;
 }
 
 #content-leg #leg p {
@@ -570,7 +570,7 @@ ul li.itemmenubar a:hover {
 
 #content-leg #leg .conteudo {
     display: inline-block;
-    padding: 15px 10px 0 10px;
+    padding: 5px 10px 5px 10px;
     box-sizing: border-box;
     margin: 0;
     width: 84%;
@@ -624,7 +624,7 @@ ul li.itemmenubar a:hover {
         font-size: 80%;
     }
     #content-leg #leg h2 {
-        font-size: 100%;
+        font-size: 111%;
     }
     #dataon .data {
         width: 94%;
