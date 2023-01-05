@@ -351,6 +351,8 @@ ul li.itemmenubar a:hover {
     }
 }
 
+
+
 /*--- destaque home ---*/
 #caixadestaque {
     width: 80%;
@@ -385,7 +387,7 @@ ul li.itemmenubar a:hover {
     text-decoration: none;
     background-color: #fff;
     box-sizing: border-box;
-    box-shadow: 0 0 12px 2px #ececec;
+    box-shadow: 0 3px 8px 0 rgb(0 0 0 / 16%);
 }
 
 #caixadestaque #bottom a.inativo {
@@ -404,11 +406,12 @@ ul li.itemmenubar a:hover {
     text-decoration: none;
     opacity: 95%;
     transition: 0.3s;
-    box-shadow: 0px 0px 20px #ddd;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.22);
     border: 1px solid #eff0f0;
 }
 
-@media (max-width: 600px) {
+
+@media (max-width: 550px) {
     #caixadestaque {
         width: 100%;
         border: none;
@@ -417,7 +420,6 @@ ul li.itemmenubar a:hover {
         box-shadow: none;
         margin: 0 auto;
     }
-
     #caixadestaque #bottom {
         float: left;
         padding: 0;
@@ -425,13 +427,29 @@ ul li.itemmenubar a:hover {
         margin: 0;
         line-height: 0
     }
-
     #caixadestaque #bottom a {
         padding: 15px 0;
     }
-
     #caixadestaque #bottom a.inativo {
         background-position: 100% 10%;
+    }
+}
+@media (min-width: 550px) and (max-width: 1000px) {
+    #caixadestaque {
+        width: 95%;
+    }
+    #caixadestaque #bottom {
+        padding: 0;
+        width: 45%;
+        margin: 0.3% 2%;
+        line-height: 0
+    }
+    #caixadestaque #bottom a {
+        padding: 40px 20px;
+    }
+    #caixadestaque #bottom a.inativo {
+        background-position: 100% 10%;
+        background-size: 26%;
     }
 }
 
