@@ -29,35 +29,38 @@
     }
   </style>
 
+<script>
+  const sheetId = "1ym99Rtiw74VlWNmVA2PzIIkSxbZ54mT9XkKgUuASybQ";
+  const sheetNumber = "3";
 
-  <!-- script conteudo -->
-  <script type="text/javascript">
-    let http = new XMLHttpRequest();
-    http.open('get', 'https://opensheet.elk.sh/1ym99Rtiw74VlWNmVA2PzIIkSxbZ54mT9XkKgUuASybQ/1', true);
-    http.send();
-    http.onload = function () {
-      if (this.readyState == 4 && this.status == 200) {
-        let data = JSON.parse(this.responseText);
-        let output = "";
-        for (let item of data) {
-          output += `
-            <div id="content-leg">
-                <div id="leg" class="data">
-                    <div id="numero" class="${item.tipo}">
-                        <p> ${item.id}</p>
-                    </div>
-                    <div class="conteudo">
-                        <h2> ${item.local}</h2>
-                        <p class="descricao">Informação: ${item.desc}</p>
-                    </div>
-                </div>
-            </div>
-            `;
-        }
-        document.querySelector(".data").innerHTML = output;
-      }
-    }
-  </script>
+  fetch(`https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json&sheet=${sheetNumber}`)
+    .then(res => res.text())
+    .then(text => {
+      const json = JSON.parse(text.substring(47, text.length - 2)).table.rows;
+      let output = "";
+      json.forEach(row => {
+        const id = row.c[0]?.v || "";
+        const local = row.c[1]?.v || "";
+        const desc = row.c[2]?.v || "";
+        const tipo = row.c[3]?.v || "";
+        output += `
+    <div id="content-leg">
+      <div id="leg" class="data">
+        <div id="numero" class="${tipo}" >
+          <p id="id"> ${id}</p>
+        </div>
+        <div class="conteudo">
+          <h2 id="local"> ${local}</h2>
+          <p class="descricao" id="desc"> ${desc}</p>
+        </div>
+      </div>
+    </div>
+  `;
+      });
+      document.querySelector(".data").innerHTML = output;
+    })
+    .catch(err => console.error(err));
+</script>
 
 </head>
 
