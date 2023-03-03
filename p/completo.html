@@ -29,11 +29,12 @@
     }
   </style>
 
+<!-- inicio do scrip personalizado-->
 <script>
   const sheetId = "1ym99Rtiw74VlWNmVA2PzIIkSxbZ54mT9XkKgUuASybQ";
-  const sheetNumber = "3";
+  const sheetName = "DataComp";
 
-  fetch(`https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json&sheet=${sheetNumber}`)
+  fetch(`https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json&sheet=${sheetName}`)
     .then(res => res.text())
     .then(text => {
       const json = JSON.parse(text.substring(47, text.length - 2)).table.rows;
@@ -61,6 +62,7 @@
     })
     .catch(err => console.error(err));
 </script>
+<!-- fim do scrip personalizado-->
 
 </head>
 
