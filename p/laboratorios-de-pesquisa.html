@@ -29,6 +29,41 @@
     }
   </style>
 
+  <!-- inicio do scrip personalizado-->
+<script>
+  const sheetId = "1ym99Rtiw74VlWNmVA2PzIIkSxbZ54mT9XkKgUuASybQ";
+  const sheetName = "LabPesquisa";
+
+  fetch(`https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json&sheet=${sheetName}`)
+    .then(res => res.text())
+    .then(text => {
+      const json = JSON.parse(text.substring(47, text.length - 2)).table.rows;
+      let output = "";
+      json.forEach(row => {
+        const id = row.c[0]?.v || "";
+        const local = row.c[1]?.v || "";
+        const desc = row.c[2]?.v || "";
+        const tipo = row.c[3]?.v || "";
+        output += `
+    <div id="content-leg">
+      <div id="leg" class="data">
+        <div id="numero" class="${tipo}" >
+          <p id="id"> ${id}</p>
+        </div>
+        <div class="conteudo">
+          <h2 id="local"> ${local}</h2>
+          <p class="descricao" id="desc"> ${desc}</p>
+        </div>
+      </div>
+    </div>
+  `;
+      });
+      document.querySelector(".data").innerHTML = output;
+    })
+    .catch(err => console.error(err));
+</script>
+<!-- fim do scrip personalizado-->
+
 </head>
 
 <body>
@@ -85,6 +120,11 @@
               </ul>
             </div>
             <!--navegacao fim -->
+             <!--conteudo base de dados online -->
+             <div id="dataon">
+              <div class="data"></div>
+            </div>
+            <!--conteudo base de dados online -->
           </div>
         </div>
       </div>
