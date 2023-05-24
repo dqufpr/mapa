@@ -41,18 +41,22 @@
       let output = "";
       json.forEach(row => {
         const id = row.c[0]?.v || "";
-        const local = row.c[1]?.v || "";
-        const desc = row.c[2]?.v || "";
-        const tipo = row.c[3]?.v || "";
+        const nome = row.c[1]?.v || "";
+        const abrev = row.c[2]?.v || "";
+        const idlocal = row.c[3]?.v || "";
+        const desc = row.c[4]?.v || "";
+        const tipo = row.c[5]?.v || "";
         output += `
     <div id="content-leg">
-      <div id="leg" class="data">
-        <div id="numero" class="${tipo}" >
-          <p id="id"> ${id}</p>
+      <div id="leg">
+        <div id="numero" class="${tipo}">
+          <div id="id"> ${id}</div>
         </div>
         <div class="conteudo">
-          <h2 id="local"> ${local}</h2>
-          <p class="descricao" id="desc"> ${desc}</p>
+          <span class="nome"> ${nome}</span>
+          <span class="abrev"> ${abrev}</span>
+          <span class="idlocal"> <b>Sala n.</b> ${idlocal}</span> 
+          <span class="descricao" id="desc"> ${desc}</span>
         </div>
       </div>
     </div>
@@ -63,7 +67,6 @@
     .catch(err => console.error(err));
 </script>
 <!-- fim do scrip personalizado-->
-
 </head>
 
 <body>
