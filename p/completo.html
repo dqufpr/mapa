@@ -48,17 +48,15 @@
         const tipo = row.c[5]?.v || "";
         output += `
     <div id="content-leg">
-      <div id="leg" class="data">
+      <div id="leg">
         <div id="numero" class="${tipo}">
-          <p id="id"> ${id}</p>
+          <div id="id"> ${id}</div>
         </div>
         <div class="conteudo">
-          <h2 id="nome"> ${nome}</h2>
-          <p>
+          <span class="nome"> ${nome}</span>
           <span class="abrev"> ${abrev}</span>
           <span class="idlocal"> ${idlocal}</span> 
-          </p>
-          <p class="descricao" id="desc"> ${desc}</p>
+          <span class="descricao" id="desc"> ${desc}</span>
         </div>
       </div>
     </div>
