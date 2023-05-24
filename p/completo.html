@@ -30,10 +30,9 @@
   </style>
 
 <!-- inicio do scrip personalizado-->
-
 <script>
   const sheetId = "1ym99Rtiw74VlWNmVA2PzIIkSxbZ54mT9XkKgUuASybQ";
-  const sheetName = "DataComp";
+  const sheetName = "DataTest";
 
   fetch(`https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json&sheet=${sheetName}`)
     .then(res => res.text())
@@ -42,17 +41,23 @@
       let output = "";
       json.forEach(row => {
         const id = row.c[0]?.v || "";
-        const local = row.c[1]?.v || "";
-        const desc = row.c[2]?.v || "";
-        const tipo = row.c[3]?.v || "";
+        const nome = row.c[1]?.v || "";
+        const abrev = row.c[2]?.v || "";
+        const idlocal = row.c[3]?.v || "";
+        const desc = row.c[4]?.v || "";
+        const tipo = row.c[5]?.v || "";
         output += `
     <div id="content-leg">
       <div id="leg" class="data">
-        <div id="numero" class="${tipo}" >
+        <div id="numero" class="${tipo}">
           <p id="id"> ${id}</p>
         </div>
         <div class="conteudo">
-          <h2 id="local"> ${local}</h2>
+          <h2 id="nome"> ${nome}</h2>
+          <p>
+          <span class="abrev"> ${abrev}</span>
+          <span class="idlocal"> ${idlocal}</span> 
+          </p>
           <p class="descricao" id="desc"> ${desc}</p>
         </div>
       </div>
@@ -63,7 +68,6 @@
     })
     .catch(err => console.error(err));
 </script>
-
 <!-- fim do scrip personalizado-->
 
 </head>
