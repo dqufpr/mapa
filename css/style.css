@@ -10,6 +10,10 @@
 }
 
 /*personalização*/
+#model #destaque {
+    height: 100px;  
+}
+
 #model .titulo {
     border-radius: 3px;
 }
