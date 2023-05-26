@@ -2,8 +2,18 @@
 #cabecalho {
     background-image: url(../img/logo-site-hv.svg);
 }
+
 @media (max-width: 650px) {
     #cabecalho {
         background-image: url(../img/logo-site-mobile.svg);
     }
+}
+
+/*personalização*/
+#model .titulo {
+    border-radius: 3px;
+}
+
+#model .descricao span {
+    display: none;
 }
