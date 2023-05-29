@@ -22,18 +22,17 @@
     display: none;
 }
 
+
 /*configuracoes impressão*/
 @media print {
     body {
         font-size: 12px;
     }
 
-    #cabecalho,
-    #menu,
-    #navmap {
+    #cabecalho, #menu, #navmap, #rodape {
         display: none
     }
-
+    #colunas #coluna #cb {min-height: 0;}
     #coluna {
         padding: 0;
         margin: 0;
@@ -46,5 +45,4 @@
         height: auto;
         margin: 0;
     }
-
 }
