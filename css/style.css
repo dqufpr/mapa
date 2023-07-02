@@ -2,8 +2,47 @@
 #cabecalho {
     background-image: url(../img/logo-site-hv.svg);
 }
+
 @media (max-width: 650px) {
     #cabecalho {
         background-image: url(../img/logo-site-mobile.svg);
+    }
+}
+
+/*personalização*/
+#model #destaque {
+    height: 100px;
+}
+
+#model .titulo {
+    border-radius: 3px;
+}
+
+#model .descricao span {
+    display: none;
+}
+
+
+/*configuracoes impressão*/
+@media print {
+    body {
+        font-size: 12px;
+    }
+
+    #cabecalho, #menu, #navmap, #rodape {
+        display: none
+    }
+    #colunas #coluna #cb {min-height: 0;}
+    #coluna {
+        padding: 0;
+        margin: 0;
+        min-height: 0px;
+    }
+
+    #colunas #coluna {
+        width: 100%;
+        padding: 0;
+        height: auto;
+        margin: 0;
     }
 }
