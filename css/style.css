@@ -29,10 +29,17 @@
         font-size: 12px;
     }
 
-    #cabecalho, #menu, #navmap, #rodape {
+    #cabecalho,
+    #menu,
+    #navmap,
+    #rodape {
         display: none
     }
-    #colunas #coluna #cb {min-height: 0;}
+
+    #colunas #coluna #cb {
+        min-height: 0;
+    }
+
     #coluna {
         padding: 0;
         margin: 0;
@@ -51,7 +58,7 @@
 #aviso {
     width: 87%;
     padding: 10px;
-    background-color:#f3da9f;
+    background-color: #f3da9f;
     border: 1px solid #ddceab;
     margin: 0 auto;
     color: #333;
@@ -61,12 +68,13 @@
     box-sizing: border-box;
     font-size: 105%;
 }
+
 #aviso a {
     color: #6f5619;
 }
 
 #aviso:hover {
-    background-color:#dcc58e;
+    background-color: #dcc58e;
 }
 
 @media (max-width: 650px) {
