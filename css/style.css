@@ -4,9 +4,7 @@
 }
 
 @media (max-width: 650px) {
-    #cabecalho {
-        background-image: url(../img/logo-site-mobile.svg);
-    }
+    #cabecalho {background-image: url(../img/logo-site-mobile.svg);}
 }
 
 /*personalização*/
