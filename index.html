@@ -20,8 +20,20 @@
   <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
   <title>Início - Mapa Digital - Departamento de Química UFPR</title>
 
-  <!-- estilos -->
+  <!-- estilo global -->
+  <link rel="stylesheet" href="https://dqufpr.github.io/css/style-dq-global.css">
+  <!-- estilo local -->
   <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0HMX2K2MHE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0HMX2K2MHE');
+  </script>
 </head>
 
 <body>
@@ -37,15 +49,12 @@
       <!-- menu principal -->
       <div id="menu">
         <ul id="menu_dropdown" class="menubar">
-          <li class="itemmenubar"><a href="/mapa/">INÍCIO</a></li>
-          <li class="itemmenubar"><a href="../mapa/sobre.html">SOBRE</a></li>
-          <li class="itemmenubar"><a href="../mapa/fale-conosco.html">CONTATO</a></li>
+          <li class="itemmenubar"><a href="/mapa">INÍCIO</a></li>
+          <li class="itemmenubar"><a href="sobre">SOBRE</a></li>
+          <li class="itemmenubar"><a href="fale-conosco">CONTATO</a></li>
         </ul>
       </div>
       <!-- descricao page -->
-      <div id="descricao">
-        Navegue pelas categorias:
-      </div>
 
       <div id="coluna">
         <!--coluna esquerda-->
@@ -53,33 +62,87 @@
           <div id="conteudocoluna" class="principal">
             <div class="container">
 
-              <!-- destaques home -->
-              <div id="caixadestaque">
-                <!-- b1 -->
-                <div id="bottom">
-                  <a class="rg" href="../mapa/p/completo.html" title="Mapa completo"><span>Mapa completo</span></a>
+              <!--avisos inicio-->
+             
+              <!--aviso fim-->
+
+              <!-- destaques home inicio -->
+              <div id="homemodel">
+                <!-- elemento 1 inicio -->
+                <div id="model">
+                  <div id="destaque" class="mapa-completo"></div>
+                  <div class="titulo">
+                    <a href="p/completo" title="Mapa Digital"><span>Mapa completo</span></a>
+                  </div>
+                  <div class="descricao">
+                    <span></span>
+                  </div>
                 </div>
-                <!-- b1 -->
-                <div id="bottom">
-                  <a class="inativo" href="../mapa/p/servicos.html" title="Serviços"><span>Serviços</span></a>
+                <!-- elemento 2 inicio -->
+                <div id="model">
+                  <div id="destaque" class="salaaula"></div>
+                  <div class="titulo">
+                    <a href="p/sala-de-aula" title="Sala de Aula"><span>Sala de Aula</span></a>
+                  </div>
+                  <div class="descricao">
+                    <span></span>
+                  </div>
                 </div>
-                <!-- b1 -->
-                <div id="bottom">
-                  <a class="rg" href="../mapa/p/sala-de-aula.html" title="Sala de Aula"><span>Sala de Aula</span></a>
+                <!-- elemento 3 inicio -->
+                <div id="model">
+                  <div id="destaque" class="salaprofessor"></div>
+                  <div class="titulo">
+                    <a href="p/sala-de-professor" title="Sala de Professor"><span>Sala de
+                        Professor</span></a>
+                  </div>
+                  <div class="descricao">
+                    <span></span>
+                  </div>
                 </div>
-                <!-- b1 -->
-                <div id="bottom">
-                  <a class="rg" href="../mapa/p/sala-de-professor.html" title="Sala de Professor"><span>Sala de Professor</span></a>
+                <!-- elemento 4 inicio -->
+                <div id="model">
+                  <div id="destaque" class="servico"></div>
+                  <div class="titulo">
+                    <a href="p/servicos" title="Serviços"><span>Serviços</span></a>
+                  </div>
+                  <div class="descricao">
+                    <span></span>
+                  </div>
                 </div>
-                <!-- b1 -->
-                <div id="bottom">
-                  <a class="inativo" href="../mapa/p/laboratorios-de-pesquisa.html" title="Laboratórios de Pesquisa"><span>Laboratórios de Pesquisa</span></a>
+                <!-- elemento 5 inicio -->
+                <div id="model">
+                  <div id="destaque" class="labpesquisa"></div>
+                  <div class="titulo">
+                    <a href="p/laboratorios-de-pesquisa"
+                      title="Laboratórios de Pesquisa"><span>Laboratórios de Pesquisa</span></a>
+                  </div>
+                  <div class="descricao">
+                    <span></span>
+                  </div>
                 </div>
-                <!-- b1 -->
-                <div id="bottom">
-                  <a class="inativo" href="../mapa/p/laboratorios-de-ensino.html" title="Laboratórios de Ensino"><span>Laboratórios de Ensino</span></a>
+                <!-- elemento 6 inicio -->
+                <div id="model">
+                  <div id="destaque" class="labensino"></div>
+                  <div class="titulo">
+                    <a href="p/laboratorios-de-ensino" title="Laboratórios de Ensino"><span>Laboratórios de
+                        Ensino</span></a>
+                  </div>
+                  <div class="descricao">
+                    <span></span>
+                  </div>
                 </div>
+                <!--elemento fim-->
+
               </div>
+              <div id="nota" class="home">
+                <span>
+                  Em breve os locais serão atualizados de acordo com a nova organização do departamento.</p>
+                </span>
+                <span>
+                  Histórico e atualizações disponível <a href="atualizacao">aqui.</a>
+                </span>
+              </div>
+              <!-- destaques home inicio -->
             </div>
           </div>
         </div>
@@ -90,16 +153,16 @@
           <a href="/" title="Página inicial - DQ DIGITAL"><span class="logo-pd"></span></a>
           Departamento de Química<br />
           Universidade Federal do Paraná<br />
-          <a target="blank" href="#">Centro Politécnico, Jardim das Américas, 100</a>
+          <a target="blank" href="https://goo.gl/maps/Rmnz7SemZtP3ws6t9" title="Veja no Google Maps">Centro Politécnico,
+            Jardim das Américas, 100, 81531-980</a>
         </div>
         <div id="coluna" class="rodape2">
-          <p>©2023 Departamento de Química</p>
-          <p>Representação Discente 2021-2022 PPGQ UFPR</p>
+          <p>Representação Discente — 2022-2023 PPGQ UFPR</p>
+          <p><a href="legal" title="Aviso legal dos desenvolvedores">Aviso legal</a></p>
         </div>
       </div>
       <!-- rodape fim -->
     </div>
   </div>
 </body>
-
 </html>

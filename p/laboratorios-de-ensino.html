@@ -20,15 +20,53 @@
   <link rel="shortcut icon" href="../img/favicon.svg" type="image/x-icon">
   <title>Laboratórios de Ensino - Mapa Digital - Departamento de Química UFPR</title>
 
-  <!-- estilos -->
+  <!-- estilo global -->
+  <link rel="stylesheet" href="https://dqufpr.github.io/css/style-dq-global.css">
+  <!-- estilo local -->
   <link rel="stylesheet" href="../css/style.css">
   <style type="text/css">
-    @media (max-width: 600px) {
-      #colunas #coluna {
-        padding: 20px 5px;
-      }
+    @media (max-width: 600px) {#colunas #coluna {padding: 20px 5px;}
     }
   </style>
+
+  <!-- inicio do scrip personalizado-->
+<script>
+  const sheetId = "1ym99Rtiw74VlWNmVA2PzIIkSxbZ54mT9XkKgUuASybQ";
+  const sheetName = "LabEnsino";
+
+  fetch(`https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json&sheet=${sheetName}`)
+    .then(res => res.text())
+    .then(text => {
+      const json = JSON.parse(text.substring(47, text.length - 2)).table.rows;
+      let output = "";
+      json.forEach(row => {
+        const id = row.c[0]?.v || "";
+        const nome = row.c[1]?.v || "";
+        const abrev = row.c[2]?.v || "";
+        const idlocal = row.c[3]?.v || "";
+        const desc = row.c[4]?.v || "";
+        const tipo = row.c[5]?.v || "";
+        output += `
+    <div id="content-leg">
+      <div id="leg">
+        <div id="numero" class="${tipo}">
+          <div id="id"> ${id}</div>
+        </div>
+        <div class="conteudo">
+          <span class="nome">${nome}</span>
+          <span class="abrev">${abrev}</span>
+          <span class="idlocal">${idlocal}</span> 
+          <span class="descricao" id="desc">${desc}</span>
+        </div>
+      </div>
+    </div>
+  `;
+      });
+      document.querySelector(".data").innerHTML = output;
+    })
+    .catch(err => console.error(err));
+</script>
+<!-- fim do scrip personalizado-->
 </head>
 
 <body>
@@ -45,12 +83,12 @@
       <div id="menu">
         <ul id="menu_dropdown" class="menubar">
           <li class="itemmenubar"><a href="/mapa/">INÍCIO</a></li>
-          <li class="itemmenubar"><a href="../sobre.html">SOBRE</a></li>
-          <li class="itemmenubar"><a href="../fale-conosco.html">CONTATO</a></li>
+          <li class="itemmenubar"><a href="../sobre">SOBRE</a></li>
+          <li class="itemmenubar"><a href="../fale-conosco">CONTATO</a></li>
         </ul>
       </div>
       <!-- descricao page -->
-      <div id="descricao">
+      <div id="descricao" class="labensino">
         Laboratórios de Ensino
       </div>
 
@@ -60,31 +98,36 @@
           <div id="conteudocoluna" class="principal">
             <!-- versão mapa -->
             <div class="container">
-              <iframe src="../map/laboratorios-de-ensino.html">
+              <iframe src="../map/laboratorios-de-ensino">
               </iframe>
             </div>
 
             <!--navegacao inicio -->
             <div id="navmap">
               <ul>
-                <a href="../p/completo.html" title="Mapa completo">
+                <a href="../p/completo" title="Mapa completo">
                   <li>Mapa completo</li>
                 </a>
-                <a href="../p/sala-de-aula.html" title="Sala de Aula">
+                <a href="../p/sala-de-aula" title="Sala de Aula">
                   <li>Sala de Aula</li>
                 </a>
-                <a href="../p/sala-de-professor.html" title="Sala de Professor/Técnico">
-                  <li>Sala de Professor/Técnico</li>
+                <a href="../p/sala-de-professor" title="Sala de Professor">
+                  <li>Sala de Professor</li>
                 </a>
-                <a href="../p/laboratorios-de-ensino.html" title="Laboratórios de Ensino">
-                  <li>Laboratórios de Ensino</li>
+                <a href="../p/servicos" title="Serviços">
+                  <li>Serviços</li>
                 </a>
-                <a href="../p/laboratorios-de-pesquisa.html" title="Laboratórios de Pesquisa">
+                <a href="../p/laboratorios-de-pesquisa" title="Laboratórios de Pesquisa">
                   <li>Laboratórios de Pesquisa</li>
                 </a>
               </ul>
             </div>
             <!--navegacao fim -->
+             <!--conteudo base de dados online -->
+             <div id="dataon">
+              <div class="data"></div>
+            </div>
+            <!--conteudo base de dados online -->
           </div>
         </div>
       </div>
@@ -94,16 +137,15 @@
           <a href="/" title="Página inicial - DQ DIGITAL"><span class="logo-pd"></span></a>
           Departamento de Química<br />
           Universidade Federal do Paraná<br />
-          <a target="blank" href="#">Centro Politécnico, Jardim das Américas, 100</a>
+          <a target="blank" href="https://goo.gl/maps/Rmnz7SemZtP3ws6t9" title="Veja no Google Maps">Centro Politécnico, Jardim das Américas, 100, 81531-980</a>
         </div>
         <div id="coluna" class="rodape2">
-          <p>©2023 Departamento de Química</p>
-          <p>Representação Discente 2021-2022 PPGQ UFPR</p>
+          <p>Representação Discente — 2022-2023 PPGQ UFPR</p>
+          <p><a href="../legal" title="Aviso legal dos desenvolvedores">Aviso legal</a></p>
         </div>
       </div>
       <!-- rodape fim -->
     </div>
   </div>
 </body>
-
 </html>
