@@ -29,6 +29,71 @@
       }
     }
   </style>
+<<<<<<< Updated upstream
+=======
+
+  <!-- inicio do scrip personalizado-->
+  <script>
+    const sheetId = "1ym99Rtiw74VlWNmVA2PzIIkSxbZ54mT9XkKgUuASybQ";
+    const sheetName = "Completo";
+
+    fetch(`https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json&sheet=${sheetName}`)
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(`Erro na requisição: ${res.status}`);
+        }
+        return res.text();
+      })
+      .then(text => {
+        // Verifica se o texto começa com o prefixo esperado e remove-o
+        if (!text.startsWith("/*O_o*/") || !text.endsWith(");")) {
+          throw new Error("Formato de resposta inesperado");
+        }
+        const jsonString = text.substring(47, text.length - 2);
+        const data = JSON.parse(jsonString);
+
+        if (!data.table || !data.table.rows) {
+          throw new Error("Estrutura de dados inesperada");
+        }
+
+        const rows = data.table.rows;
+        let output = "";
+
+        rows.forEach(row => {
+          const id = row.c[0]?.v || "";
+          const nome = row.c[1]?.v || "";
+          const abrev = row.c[2]?.v || "";
+          const idlocal = row.c[3]?.v || "";
+          const desc = row.c[4]?.v || "";
+          const tipo = row.c[5]?.v || "";
+
+          output += `
+        <div class="content-leg">
+          <div class="leg">
+            <div class="numero ${tipo}">
+              <div class="id">${id}</div>
+            </div>
+            <div class="conteudo">
+              <span class="nome">${nome}</span>
+              <span class="abrev">${abrev}</span>
+              <span class="idlocal">${idlocal}</span> 
+              <span class="descricao">${desc}</span>
+            </div>
+          </div>
+        </div>
+      `;
+        });
+
+        document.querySelector(".data").innerHTML = output;
+      })
+      .catch(err => {
+        console.error("Erro ao carregar os dados:", err);
+        document.querySelector(".data").innerHTML = `<p>Erro ao carregar os dados: ${err.message}</p>`;
+      });
+  </script>
+  <!-- fim do scrip personalizado-->
+
+>>>>>>> Stashed changes
 </head>
 
 <body>
@@ -94,7 +159,12 @@
           <a href="/" title="Página inicial - DQ DIGITAL"><span class="logo-pd"></span></a>
           Departamento de Química<br />
           Universidade Federal do Paraná<br />
+<<<<<<< Updated upstream
           <a target="blank" href="#">Centro Politécnico, Jardim das Américas, 100</a>
+=======
+          <a target="blank" href="https://goo.gl/maps/Rmnz7SemZtP3ws6t9" title="Veja no Google Maps">Centro Politécnico,
+            Jardim das Américas, 100, 81531-980</a>
+>>>>>>> Stashed changes
         </div>
         <div id="coluna" class="rodape2">
           <p>©2023 Departamento de Química</p>
@@ -106,4 +176,8 @@
   </div>
 </body>
 
+<<<<<<< Updated upstream
 </html>
+=======
+</html>
+>>>>>>> Stashed changes
