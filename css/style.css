@@ -1,88 +1,38 @@
 /************************************************************/
-/*//////////// css global plataforma DQ Digital ////////////*/
+/* 1. CABEÇALHO                                             */
 /************************************************************/
+#cabecalho { background-image: url(../img/logo-site-hv.svg); }
 
-/*-- cabeçalho mapa --*/
-#cabecalho {
-    background-image: url(../img/logo-site-hv.svg);
-}
+/************************************************************/
+/* 2. PERSONALIZAÇÃO                                        */
+/************************************************************/
+#model #destaque { height: 100px; }
+#model .titulo { border-radius: 3px; }
+#model .descricao span { display: none; }
 
-@media (max-width: 650px) {
-    #cabecalho {background-image: url(../img/logo-site-mobile.svg);}
-}
+/************************************************************/
+/* 3. AVISOS E ATUALIZAÇÕES                                 */
+/************************************************************/
+#aviso { width: 97%; padding: 10px; background-color: #f3da9f; border: 1px solid #ddceab; margin: 0 auto; color: #333; font-weight: 800; border-radius: 6px; text-align: center; box-sizing: border-box; font-size: 105%; }
+#aviso a { color: #6f5619; }
+#aviso:hover { background-color: #dcc58e; }
 
-/*personalização*/
-#model #destaque {
-    height: 100px;
-}
-
-#model .titulo {
-    border-radius: 3px;
-}
-
-#model .descricao span {
-    display: none;
-}
-
-
-/*configuracoes impressão*/
+/************************************************************/
+/* 4. CONFIGURAÇÕES DE IMPRESSÃO                            */
+/************************************************************/
+/* === Seletores de coluna combinados para otimização === */
 @media print {
-    body {
-        font-size: 12px;
-    }
-
-    #cabecalho,
-    #menu,
-    #navmap,
-    #rodape {
-        display: none
-    }
-
-    #colunas #coluna #cb {
-        min-height: 0;
-    }
-
-    #coluna {
-        padding: 0;
-        margin: 0;
-        min-height: 0px;
-    }
-
-    #colunas #coluna {
-        width: 100%;
-        padding: 0;
-        height: auto;
-        margin: 0;
-    }
+    body { font-size: 12px; }
+    #cabecalho, #menu, #navmap, #rodape { display: none; }
+    #coluna, #colunas #coluna { width: 100%; padding: 0; margin: 0; min-height: 0; height: auto; }
+    #colunas #coluna #cb { min-height: 0; }
 }
 
-/* avisos e updates*/
-#aviso {
-    width: 97%;
-    padding: 10px;
-    background-color: #f3da9f;
-    border: 1px solid #ddceab;
-    margin: 0 auto;
-    color: #333;
-    font-weight: 800;
-    border-radius: 6px;
-    text-align: center;
-    box-sizing: border-box;
-    font-size: 105%;
-}
-
-#aviso a {
-    color: #6f5619;
-}
-
-#aviso:hover {
-    background-color: #dcc58e;
-}
-
+/************************************************************/
+/* 5. RESPONSIVIDADE                                        */
+/************************************************************/
+/* === Regras para telas até 650px agrupadas === */
 @media (max-width: 650px) {
-    #aviso {
-        width: 90%;
-        padding: 20px;
-        margin: 0 auto 1em auto;
-    }
+    #cabecalho { background-image: url(../img/logo-site-mobile.svg); }
+    #aviso { width: 90%; padding: 20px; margin: 0 auto 1em auto; }
 }
